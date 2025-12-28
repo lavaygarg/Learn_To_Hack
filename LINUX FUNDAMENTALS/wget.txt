@@ -1,0 +1,118 @@
+#Description : 
+wget is a command-line tool used to download files from the web using HTTP, HTTPS, or FTP.
+It is especially useful in CTFs, penetration testing, scripting, and servers without a GUI—because you can quietly pull files, payloads, web pages, and resources directly from a terminal.
+
+
+# wget has many options:- 
+
+1. -O <file> — Save Output to a Specific File
+wget -O output.txt http://example.com/page
+
+
+Normally, wget saves files using their original name.
+-O lets you rename the downloaded file.
+
+Useful when:
+- dumping webpage content
+- storing results for later analysis
+
+2️. -c — Continue / Resume Download
+wget -c http://example.com/bigfile.iso
+
+
+If the download stops (network drop, disconnect, etc.), -c allows you to resume from where it stopped, not restart.
+
+Very useful for:
+- large files
+- unstable connections
+
+3️. -q — Quiet Mode
+wget -q http://example.com/file
+
+
+Suppresses output — no progress bar, no logs.
+Useful in scripts or stealth-style operations.
+
+Combine with:
+wget -q URL -O file
+
+4️. -r — Recursive Download (Download Entire Site/Directory)
+wget -r http://example.com/folder/
+
+
+Downloads files recursively — meaning it follows directories and links.
+
+Often used in CTFs to pull:
+- hidden directories
+- backup folders
+- entire file repositories
+
+ Use carefully — it can download a LOT.
+
+5️. -l <level> — Set Recursion Depth
+wget -r -l 2 http://example.com
+
+
+Limits how deep recursion goes.
+
+Example:
+
+-l 1 → only current page + direct links
+
+-l 2 → one more level deeper
+
+Prevents downloading the whole internet 
+
+6️. -p — Download Page Resources
+wget -p http://example.com
+
+
+Downloads all resources needed to display a webpage, like:
+- images
+- scripts
+- stylesheets
+
+So you can view it offline.
+
+7️. -m — Mirror a Site
+wget -m http://example.com
+
+
+Equivalent to combining:
+
+-r -N -l inf --no-remove-listing
+
+
+This is website mirroring mode — great for archiving.
+
+8️. --user & --password — HTTP Auth Login
+wget --user=username --password=pass http://example.com
+
+
+Used when a site requires login authentication.
+
+Useful in CTF web challenges.
+
+9️. -U <agent> — Change User-Agent
+wget -U "Mozilla/5.0" http://example.com
+
+
+
+# Common CTF-Style Examples
+Download a file
+wget http://example.com/file.txt
+
+Download and rename
+wget -O secret.txt http://example.com/data
+
+Resume interrupted download
+wget -c file.iso
+
+Mirror a site
+wget -m http://example.com
+
+Recursive with depth limit
+wget -r -l 2 http://example.com
+
+Quiet + save to file
+wget -q URL -O loot.txt
