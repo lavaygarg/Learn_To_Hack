@@ -1,0 +1,36 @@
+nano
+
+Description:
+-> nano is a terminal-based text editor used to create and edit files directly from the command line.
+-> In CTFs, nano is commonly used to edit configuration files, scripts, exploit code, cron jobs, and notes when working on remote or restricted systems.
+
+Important Flags (CTF‑Relevant)
+
+1. -l
+-> Display line numbers, which is helpful when editing scripts or configs.
+Ex.
+nano -l exploit.sh
+
+
+2. -c
+-> Show cursor position (line and column number).
+Ex.
+nano -c config.txt
+
+
+3. -i
+-> Enable auto‑indentation, useful for shell scripts or code.
+Ex.
+nano -i script.sh
+
+
+4. -m
+->Enable mouse support (useful in local terminals).
+Ex.
+nano -m file.txt
+
+
+5. -w
+->Disable line wrapping (important when editing long commands, hashes, or keys).
+Ex.
+nano -w payload.txt
