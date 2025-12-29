@@ -1,0 +1,36 @@
+mkdir my_directory
+# Creates a new folder named my_directory
+
+cd my_directory
+# Moves into the directory my_directory
+
+touch kamakshi.txt
+# Creates an empty file named kamakshi.txt
+
+mv kamakshi.txt IIT2024114.txt
+# Renames the file to IIT2024114.txt
+
+cd ..
+# Goes back to the parent directory
+
+rm -r my_directory
+# Deletes the directory my_directory and its contents
+
+sudo adduser newuser
+# Creates a new user named newuser
+
+groups newuser
+# Displays the groups newuser belongs to
+
+sudo usermod -aG sudo newuser
+# Adds newuser to the sudo group
+
+groups newuser
+# Confirms the groups newuser belongs to
+
+sudo passwd newuser
+# Sets a password for newuser
+
+
+Proof Of Work :
+https://drive.google.com/file/d/1_brPFD2HOxWr5ufEbQABcAE7CDythr0x/view?usp=sharing

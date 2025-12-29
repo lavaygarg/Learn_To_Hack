@@ -1,0 +1,18 @@
+The Flag: 
+geek{grep_is_good_to_find_things_cEDf1591}
+
+The Command: 
+grep -o "geek{[^}]*}" file.1
+
+Explanation: 
+I used the wget command to download the data file. 
+The grep command searches for patterns within files. 
+I used the -o (only-matching) flag to isolate the flag 
+from a massive "wall of text," as a standard search would
+have printed the entire messy line. The pattern "geek{[^}]*}" 
+specifically tells the terminal to find the "geek{" prefix and 
+capture everything until the closing bracket, ignoring the surrounding 
+random characters and making it easy to directly lookout for the flag.
+
+Proof :
+https://drive.google.com/file/d/16CRnzqRsDt6PNX_BmQqWELApWLf5mYCK/view?usp=sharing
