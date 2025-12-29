@@ -1,0 +1,14 @@
+Directory:
+apoorv@Apoorv-PC:~/task2$ mkdir mydir                           creates a folder called mydir
+apoorv@Apoorv-PC:~/task2$ cd mydir                              steps into mydir
+apoorv@Apoorv-PC:~/task2/mydir$ touch Apoorv.txt                creates a file named Apoorv.txt
+apoorv@Apoorv-PC:~/task2/mydir$ mv Apoorv.txt 23103331.txt      renames the Apoorv.txt file to 23103331.txt
+apoorv@Apoorv-PC:~/task2/mydir$ cd ..                           goes to the parent folder
+apoorv@Apoorv-PC:~/task2$ rm -r mydir/                          recursively deletes the mydir folder
+
+User:
+apoorv@Apoorv-PC:~/task2$ sudo adduser temp1                    creates user, home directory, asks details
+apoorv@Apoorv-PC:~/task2$ groups temp1                          lists the groups of the new user
+apoorv@Apoorv-PC:~/task2$ sudo usermod -aG sudo temp1           adds the sudo group to temp1
+apoorv@Apoorv-PC:~/task2$ groups temp1                          returns => temp1 : temp1 sudo users
+apoorv@Apoorv-PC:~/task2$ sudo passwd temp1                     prompts us to write a new password for temp1
